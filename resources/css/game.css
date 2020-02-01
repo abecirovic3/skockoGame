@@ -1,0 +1,7 @@
+.fullHit {
+   -fx-background-color: greenyellow;
+}
+
+.halfHit {
+   -fx-background-color: lightpink;
+}
