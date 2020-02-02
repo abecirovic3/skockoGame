@@ -242,7 +242,7 @@ public class GameController {
         //validate input...
         HashMap<String, Integer> result = model.validateInput();
         int fullHits = result.get("fullHits"), halfHits = result.get("halfHits");
-        System.out.println("puni : " + fullHits + " pola: " + halfHits);
+//        System.out.println("puni : " + fullHits + " pola: " + halfHits);
         switch (activeLine) {
             case 0:
                 fillLabels(lab00, lab01, lab02, lab03, fullHits, halfHits);
@@ -267,12 +267,25 @@ public class GameController {
         for(int i=0; i<4; i++)
             model.getInputList()[i] = -1;
 
+        if (fullHits == 4) {
+            showEndAlert(true);
+            return;
+        }
+
         activeLine++;
 
         if (activeLine == 6) {
             activeLine = 0;
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.show();
+            showEndAlert(false);
         }
+    }
+
+    private void showEndAlert(Boolean win) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        if (win)
+            alert.setHeaderText("Cestitam roki!");
+        if (!win)
+            alert.setHeaderText("Coukao si role moj");
+        alert.show();
     }
 }
