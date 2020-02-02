@@ -4,6 +4,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -45,12 +46,12 @@
    <children>
       <HBox prefHeight="60.0" prefWidth="380.0" spacing="2.0" GridPane.columnSpan="6" GridPane.rowIndex="12" GridPane.rowSpan="2">
          <children>
-            <Button fx:id="btnEoji" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" text="Smi" />
-            <Button fx:id="btnShamrock" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" text="D" />
-            <Button fx:id="btnLeaf" layoutX="64.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" text="L" />
-            <Button fx:id="btnHeart" layoutX="118.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" text="Src" />
-            <Button fx:id="btnSquare" layoutX="172.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" text="B" />
-            <Button fx:id="btnStar" layoutX="226.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" text="Z" />
+            <Button fx:id="btnBall" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" />
+            <Button fx:id="btnShamrock" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" />
+            <Button fx:id="btnLeaf" layoutX="64.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" />
+            <Button fx:id="btnHeart" layoutX="118.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" />
+            <Button fx:id="btnSquare" layoutX="172.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" />
+            <Button fx:id="btnDiamond" layoutX="226.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" />
             <Button fx:id="btnOk" layoutX="280.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="54.0" text="OK" />
          </children>
          <GridPane.margin>
@@ -59,27 +60,33 @@
       </HBox>
       <Pane style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img00" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img00" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0">
+               <image>
+                  <Image url="@../img/854.png" />
+               </image></ImageView>
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="15.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.rowIndex="2" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img10" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img10" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0">
+               <image>
+                  <Image url="@../img/baklava54.png" />
+               </image></ImageView>
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="73.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.rowIndex="4" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img20" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img20" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="15.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.rowIndex="6" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img30" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img30" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="15.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.rowIndex="8" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img40" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img40" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="15.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.rowIndex="10" GridPane.rowSpan="2">
@@ -89,92 +96,95 @@
       </Pane>
       <Pane layoutX="15.0" layoutY="15.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="1" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img01" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img01" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0">
+               <image>
+                  <Image url="@../img/djetelina54.png" />
+               </image></ImageView>
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="73.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img11" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img11" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="131.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img21" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img21" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="190.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img31" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img31" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="250.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="8" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img41" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img41" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="310.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="10" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img51" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img51" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="15.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="2" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img02" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img02" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="73.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img12" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img12" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="131.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img22" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img22" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="190.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="2" GridPane.rowIndex="6" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img32" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img32" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="250.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="2" GridPane.rowIndex="8" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img42" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img42" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="15.0" layoutY="310.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="2" GridPane.rowIndex="10" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img52" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img52" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="94.0" layoutY="15.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="3" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img03" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img03" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="94.0" layoutY="73.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img13" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img13" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="94.0" layoutY="131.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img23" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img23" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="94.0" layoutY="190.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="3" GridPane.rowIndex="6" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img33" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img33" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="94.0" layoutY="250.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="3" GridPane.rowIndex="8" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img43" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img43" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Pane layoutX="94.0" layoutY="310.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="3" GridPane.rowIndex="10" GridPane.rowSpan="2">
          <children>
-            <ImageView fx:id="img53" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="img53" fitHeight="53.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true" x="10.0" />
          </children>
       </Pane>
       <Label fx:id="lab00" layoutX="331.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" />
