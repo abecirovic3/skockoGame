@@ -6,6 +6,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import java.util.HashMap;
+
 public class GameController {
     public Label lab00;
     public Label lab01;
@@ -66,12 +68,14 @@ public class GameController {
     public Button btn53;
 
     private int activeLine = 0;
-//    private ArrayList<Integer> inputList = new ArrayList<>();
     private int[] inputList = new int[4];
 
-    public GameController() {
+    private GameModel model;
+
+    public GameController(GameModel model) {
+        this.model = model;
         for(int i=0; i<4; i++) {
-            inputList[i] = -1;
+            model.getInputList()[i] = -1;
         }
     }
 
@@ -104,7 +108,7 @@ public class GameController {
 
         Button button = new Button();
 
-        inputList[emptyIndex] = identifier;
+        model.getInputList()[emptyIndex] = identifier;
 
         switch (emptyIndex) {
             case 0:
@@ -152,7 +156,7 @@ public class GameController {
 
     private int firstEmptyIndex() {
         for (int i=0; i<4; i++) {
-            if (inputList[i] == -1)
+            if (model.getInputList()[i] == -1)
                 return i;
         }
         return -2;
@@ -197,13 +201,71 @@ public class GameController {
         }
     }
 
+    private Label getLabel(Label label1, Label label2, Label label3, Label label4, int i) {
+        Label label = new Label();
+        switch (i) {
+            case 0:
+                label = label1;
+                break;
+            case 1:
+                label = label2;
+                break;
+            case 2:
+                label = label3;
+                break;
+            case 3:
+                label = label4;
+                break;
+        }
+        return label;
+    }
+
+    private void fillLabels (Label label1, Label label2, Label label3, Label label4, int fullHits, int halfHits) {
+        // full hits loop
+        for (int i=0; i<fullHits; i++) {
+            Label label = getLabel(label1, label2, label3, label4, i);
+            label.setStyle(null);
+            label.getStyleClass().add("fullHit");
+        }
+
+        // half hits loop
+        for (int i = fullHits; i < fullHits + halfHits; i++) {
+            Label label = getLabel(label1, label2, label3, label4, i);
+            label.setStyle(null);
+            label.getStyleClass().add("halfHit");
+        }
+    }
+
     public void validateAction(ActionEvent actionEvent) {
         if (firstEmptyIndex() != -2) return;
 
         //validate input...
+        HashMap<String, Integer> result = model.validateInput();
+        int fullHits = result.get("fullHits"), halfHits = result.get("halfHits");
+        System.out.println("puni : " + fullHits + " pola: " + halfHits);
+        switch (activeLine) {
+            case 0:
+                fillLabels(lab00, lab01, lab02, lab03, fullHits, halfHits);
+                break;
+            case 1:
+                fillLabels(lab10, lab11, lab12, lab13, fullHits, halfHits);
+                break;
+            case 2:
+                fillLabels(lab20, lab21, lab22, lab23, fullHits, halfHits);
+                break;
+            case 3:
+                fillLabels(lab30, lab31, lab32, lab33, fullHits, halfHits);
+                break;
+            case 4:
+                fillLabels(lab40, lab41, lab42, lab43, fullHits, halfHits);
+                break;
+            case 5:
+                fillLabels(lab50, lab51, lab52, lab53, fullHits, halfHits);
+                break;
+        }
 
         for(int i=0; i<4; i++)
-            inputList[i] = -1;
+            model.getInputList()[i] = -1;
 
         activeLine++;
 

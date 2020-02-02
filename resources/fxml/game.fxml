@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="5.0" prefHeight="420.0" prefWidth="380.0" style="-fx-background-color: lightcyan;" vgap="5.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameController">
+<GridPane alignment="center" hgap="5.0" prefHeight="420.0" prefWidth="380.0" style="-fx-background-color: lightcyan;" vgap="5.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <stylesheets>
       <URL value="@/css/game.css" />
    </stylesheets>
