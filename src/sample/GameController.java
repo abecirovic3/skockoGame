@@ -81,24 +81,7 @@ public class GameController {
 
     @FXML
     public void initialize() {
-//        lab00.setStyle(null);
-//        lab00.getStyleClass().add("fullHit");
-//        lab01.getStyleClass().add("fullHit");
-//        lab02.getStyleClass().add("fullHit");
-//        lab03.getStyleClass().add("fullHit");
     }
-
-//    public void test(ActionEvent actionEvent) {
-////        btnTest.setStyle(null);
-//        btn00.setStyle("-fx-background-image: url(\"/img/list54.png\");" +
-//                "-fx-background-repeat: no-repeat;\n" +
-//                "-fx-background-position:center;" +
-//                "-fx-background-color: white;");
-//    }
-//
-//    public void remove(ActionEvent actionEvent) {
-//        btn00.setStyle("-fx-background-color: white; -fx-border-color: lightblue;");
-//    }
 
     private void inputRegistration(Button btn1, Button btn2, Button btn3, Button btn4, int identifier) {
 
@@ -287,5 +270,23 @@ public class GameController {
         if (!win)
             alert.setHeaderText("Coukao si role moj");
         alert.show();
+    }
+
+    public void recoverAction(ActionEvent actionEvent) {
+        Button button = (Button) actionEvent.getSource();
+
+        int index = 0;
+
+        if (button == btn01 || button == btn11 || button == btn21 || button == btn31 || button == btn41 || button == btn51)
+            index = 1;
+        else if (button == btn02 || button == btn12 || button == btn22 || button == btn32 || button == btn42 || button == btn52)
+            index = 2;
+        else if (button == btn03 || button == btn13 || button == btn23 || button == btn33 || button == btn43 || button == btn53)
+            index = 3;
+
+        model.getInputList()[index] = -1;
+
+        button.setStyle(null);
+        button.setStyle("-fx-background-color: white;");
     }
 }

@@ -18,8 +18,6 @@ public class GameModel {
         for (int i=0; i<4; i++) {
             result[i] = min + (int)(Math.random() * ((max - min) + 1));
         }
-        for(int i : result)
-            System.out.println(i);
         return result;
     }
 
