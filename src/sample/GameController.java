@@ -2,11 +2,20 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
+import javax.swing.*;
+import java.io.IOException;
 import java.util.HashMap;
+
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class GameController {
     public Label lab00;
@@ -71,6 +80,7 @@ public class GameController {
     private int[] inputList = new int[4];
 
     private GameModel model;
+    private boolean gameEnded = false;
 
     public GameController(GameModel model) {
         this.model = model;
@@ -147,6 +157,8 @@ public class GameController {
 
     public void inputAction(ActionEvent actionEvent) {
 
+        if (gameEnded) return;
+
         Button button = (Button) actionEvent.getSource();
 
         int identifier = 1;
@@ -219,13 +231,13 @@ public class GameController {
         }
     }
 
-    public void validateAction(ActionEvent actionEvent) {
+    public void validateAction(ActionEvent actionEvent) throws IOException {
         if (firstEmptyIndex() != -2) return;
 
         //validate input...
         HashMap<String, Integer> result = model.validateInput();
         int fullHits = result.get("fullHits"), halfHits = result.get("halfHits");
-//        System.out.println("puni : " + fullHits + " pola: " + halfHits);
+
         switch (activeLine) {
             case 0:
                 fillLabels(lab00, lab01, lab02, lab03, fullHits, halfHits);
@@ -251,25 +263,30 @@ public class GameController {
             model.getInputList()[i] = -1;
 
         if (fullHits == 4) {
-            showEndAlert(true);
+            gameEnded = true;
+            showEndAlert(model.getGeneratedList(), true);
             return;
         }
 
         activeLine++;
 
         if (activeLine == 6) {
-            activeLine = 0;
-            showEndAlert(false);
+            gameEnded = true;
+            showEndAlert(model.getGeneratedList(), false);
         }
     }
 
-    private void showEndAlert(Boolean win) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        if (win)
-            alert.setHeaderText("Cestitam roki!");
-        if (!win)
-            alert.setHeaderText("Coukao si role moj");
-        alert.show();
+    private void showEndAlert(int[] solutionList, Boolean win) throws IOException {
+        EndAlertController ctrl = new EndAlertController(solutionList, win);
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/endAlert.fxml"));
+        loader.setController(ctrl);
+
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Kraj");
+        stage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        stage.show();
     }
 
     public void recoverAction(ActionEvent actionEvent) {
@@ -288,5 +305,22 @@ public class GameController {
 
         button.setStyle(null);
         button.setStyle("-fx-background-color: white;");
+    }
+
+    public void returnToMenuAction(ActionEvent actionEvent) throws IOException {
+        MainController ctrl = new MainController();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
+        loader.setController(ctrl);
+
+        Parent root = loader.load();
+        Stage newStage = new Stage();
+        newStage.setTitle("Main");
+        newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        newStage.show();
+
+        Node node = (Node) actionEvent.getSource();
+        Stage currStage = (Stage) node.getScene().getWindow();
+        currStage.close();
     }
 }

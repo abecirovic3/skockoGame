@@ -1,6 +1,5 @@
 package sample;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class GameModel {
@@ -41,9 +40,7 @@ public class GameModel {
         HashMap<String, Integer> result = new HashMap<>();
 
         int[] copyOfGeneratedList = new int[4];
-        for (int i=0; i<4; i++) {
-            copyOfGeneratedList[i] = generatedList[i];
-        }
+        System.arraycopy(generatedList, 0, copyOfGeneratedList, 0, 4);
 
         int fullHitsCounter = 0;
         // full hits loop
