@@ -35,4 +35,10 @@ public class MainController {
         Stage currStage = (Stage) node.getScene().getWindow();
         currStage.close();
     }
+
+    public void closeGameAction(ActionEvent actionEvent) {
+        Node node = (Node) actionEvent.getSource();
+        Stage currStage = (Stage) node.getScene().getWindow();
+        currStage.close();
+    }
 }

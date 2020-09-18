@@ -11,7 +11,7 @@
             <Button fx:id="btnNewGame" mnemonicParsing="false" onAction="#startGameAction" prefHeight="60.0" prefWidth="200.0" text="NOVA IGRA" />
              <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="UPUTSTVA" />
              <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="HISTORIJA REZULTATA" />
-            <Button layoutX="15.0" layoutY="145.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="IZLAZ" />
+            <Button fx:id="btnExit" layoutX="15.0" layoutY="145.0" mnemonicParsing="false" onAction="#closeGameAction" prefHeight="60.0" prefWidth="200.0" text="IZLAZ" />
          </children>
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
