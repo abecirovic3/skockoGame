@@ -77,7 +77,9 @@ public class GameController {
     public Button btn53;
 
     private int activeLine = 0;
-    private int[] inputList = new int[4];
+    //private int[] inputList = new int[4];
+    private Stopwatch stopwatch = new Stopwatch();
+    private boolean firstAction = true;
 
     private GameModel model;
     private boolean gameEnded = false;
@@ -158,6 +160,11 @@ public class GameController {
     public void inputAction(ActionEvent actionEvent) {
 
         if (gameEnded) return;
+
+        if (firstAction) {
+            stopwatch.start();
+            firstAction = false;
+        }
 
         Button button = (Button) actionEvent.getSource();
 
@@ -264,6 +271,7 @@ public class GameController {
 
         if (fullHits == 4) {
             gameEnded = true;
+            stopwatch.stop();
             showEndAlert(model.getGeneratedList(), true);
             return;
         }
@@ -272,12 +280,13 @@ public class GameController {
 
         if (activeLine == 6) {
             gameEnded = true;
+            stopwatch.stop();
             showEndAlert(model.getGeneratedList(), false);
         }
     }
 
     private void showEndAlert(int[] solutionList, Boolean win) throws IOException {
-        EndAlertController ctrl = new EndAlertController(solutionList, win);
+        EndAlertController ctrl = new EndAlertController(solutionList, win, stopwatch.getElapsedTime().toString());
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/endAlert.fxml"));
         loader.setController(ctrl);
@@ -290,6 +299,8 @@ public class GameController {
     }
 
     public void recoverAction(ActionEvent actionEvent) {
+        if (gameEnded) return;
+
         Button button = (Button) actionEvent.getSource();
 
         int index = 0;

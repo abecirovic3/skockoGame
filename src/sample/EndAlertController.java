@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 public class EndAlertController {
     public Label messageLabel;
     public Label solutionLabel;
+    public Label timeLabel;
     public ImageView img1;
     public ImageView img2;
     public ImageView img3;
@@ -20,16 +21,23 @@ public class EndAlertController {
 
     private int[] solutionList;
     private boolean win;
+    private String elapsedTime;
 
-    public EndAlertController(int[] solutionList, boolean win) {
+    public EndAlertController(int[] solutionList, boolean win, String elapsedTime) {
         this.solutionList = solutionList;
         this.win = win;
+        this.elapsedTime = elapsedTime;
     }
 
     @FXML
     public void initialize() {
         setSolutionImages();
         setMessageLabelText();
+        setTimeLabelTime();
+    }
+
+    private void setTimeLabelTime() {
+        timeLabel.setText(timeLabel.getText() + " " + elapsedTime);
     }
 
     private void setMessageLabelText() {
