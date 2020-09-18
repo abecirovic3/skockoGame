@@ -56,7 +56,7 @@ public class DAO {
         }
 
         try {
-            addHighscoreQuerry = conn.prepareStatement("INSERT INTO highscore VALUES(?, ?, ?)");
+            addHighscoreQuerry = conn.prepareStatement("INSERT INTO highscores VALUES(?, ?, ?)");
             getNewUserIdQuery = conn.prepareStatement("SELECT MAX(id) + 1 FROM highscores");
             deleteAllHighscoresQuerry = conn.prepareStatement("DELETE from highscores");
         } catch (SQLException e) {
