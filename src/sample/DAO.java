@@ -6,12 +6,13 @@ import javafx.collections.ObservableList;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.sql.*;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class DAO {
     private static DAO instance;
     private Connection conn;
-    private ObservableList<String> highscores = FXCollections.observableArrayList();
+    private ObservableList<Highscore> highscores = FXCollections.observableArrayList();
     private PreparedStatement getAllHighscoresQuerry, addHighscoreQuerry, deleteAllHighscoresQuerry, getNewUserIdQuery;
 
     public static DAO getInstance() {
@@ -66,9 +67,9 @@ public class DAO {
         try {
             ResultSet rs = getAllHighscoresQuerry.executeQuery();
             while (rs.next()) {
-                String str = rs.getString(2) + " " + rs.getString(3);
-                highscores.add(str);
+                highscores.add(new Highscore(rs.getString(2), LocalTime.parse(rs.getString(3))));
             }
+            FXCollections.sort(highscores);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -104,7 +105,8 @@ public class DAO {
             addHighscoreQuerry.setString(2, username);
             addHighscoreQuerry.setString(3, time);
             addHighscoreQuerry.executeUpdate();
-            highscores.add(username + " " + time);
+            highscores.add(new Highscore(username, LocalTime.parse(time)));
+            FXCollections.sort(highscores);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -113,12 +115,13 @@ public class DAO {
     public void deleteAllHighscores() {
         try {
             deleteAllHighscoresQuerry.executeUpdate();
+            highscores.removeAll();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public ObservableList<String> getHighscores() {
+    public ObservableList<Highscore> getHighscores() {
         return highscores;
     }
 }

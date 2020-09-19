@@ -8,8 +8,6 @@
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="messageLabel" prefWidth="205.0" />
-      <Label fx:id="timeLabel" text="Vrijeme:" />
-      <Label fx:id="solutionLabel" prefWidth="205.0" text="Tacna kombinacija je:" />
       <GridPane hgap="5.0" prefWidth="205.0" vgap="5.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -27,6 +25,9 @@
             <ImageView fx:id="img4" fitHeight="45.0" fitWidth="45.0" layoutX="10.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
          </children>
       </GridPane>
+      <Label fx:id="timeLabel" text="Vaše vrijeme je:" />
+      <Label fx:id="recordLabel" />
+      <TextField fx:id="usernameFld" />
       <ButtonBar prefHeight="40.0" prefWidth="205.0">
         <buttons>
           <Button fx:id="btnOk" mnemonicParsing="false" onAction="#closeAlertAction" text="OK" />

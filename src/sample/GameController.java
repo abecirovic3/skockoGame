@@ -82,6 +82,7 @@ public class GameController {
     private boolean firstAction = true;
 
     private GameModel model;
+    private DAO dao = DAO.getInstance();
     private boolean gameEnded = false;
 
     public GameController(GameModel model) {
@@ -286,7 +287,7 @@ public class GameController {
     }
 
     private void showEndAlert(int[] solutionList, Boolean win) throws IOException {
-        EndAlertController ctrl = new EndAlertController(solutionList, win, stopwatch.getElapsedTime().toString());
+        EndAlertController ctrl = new EndAlertController(solutionList, win, stopwatch.getElapsedTime().toString(), dao.getHighscores());
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/endAlert.fxml"));
         loader.setController(ctrl);
