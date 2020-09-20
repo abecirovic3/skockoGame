@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,11 +15,13 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class MainController {
 
+    public ListView<Highscore> highscoreListView;
+
     private DAO dao = DAO.getInstance();
 
     @FXML
     public void initialize() {
-
+        highscoreListView.setItems(dao.getHighscores());
     }
 
 

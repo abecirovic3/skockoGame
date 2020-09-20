@@ -67,7 +67,7 @@ public class DAO {
         try {
             ResultSet rs = getAllHighscoresQuerry.executeQuery();
             while (rs.next()) {
-                highscores.add(new Highscore(rs.getString(2), LocalTime.parse(rs.getString(3))));
+                highscores.add(new Highscore(rs.getString(1), LocalTime.parse(rs.getString(2))));
             }
             FXCollections.sort(highscores);
         } catch (SQLException e) {

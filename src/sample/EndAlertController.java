@@ -30,6 +30,8 @@ public class EndAlertController {
     private String elapsedTime;
     private ObservableList<Highscore> highscores;
 
+    private DAO dao = DAO.getInstance();
+
     public EndAlertController(int[] solutionList, boolean win, String elapsedTime, ObservableList<Highscore> highscores) {
         this.solutionList = solutionList;
         this.win = win;
@@ -92,7 +94,8 @@ public class EndAlertController {
     }
 
     public void closeAlertAction(ActionEvent actionEvent) {
-        // need to update db
+        if (isNewHighscore(elapsedTime) && !usernameFld.getText().equals(""))
+            dao.addHighscore(usernameFld.getText(), elapsedTime);
         Node node = (Node) actionEvent.getSource();
         Stage currStage = (Stage) node.getScene().getWindow();
         currStage.close();
