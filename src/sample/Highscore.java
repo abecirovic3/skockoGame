@@ -2,7 +2,7 @@ package sample;
 
 import java.time.LocalTime;
 
-public class Highscore implements Comparable{
+public class Highscore implements Comparable {
     private String username;
     private LocalTime time;
 

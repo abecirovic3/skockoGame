@@ -15,16 +15,6 @@ import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class MainController {
 
-    public ListView<Highscore> highscoreListView;
-
-    private DAO dao = DAO.getInstance();
-
-    @FXML
-    public void initialize() {
-        highscoreListView.setItems(dao.getHighscores());
-    }
-
-
     public void startGameAction(ActionEvent actionEvent) throws IOException {
         GameController ctrl = new GameController(new GameModel());
 
@@ -43,6 +33,23 @@ public class MainController {
     }
 
     public void closeGameAction(ActionEvent actionEvent) {
+        Node node = (Node) actionEvent.getSource();
+        Stage currStage = (Stage) node.getScene().getWindow();
+        currStage.close();
+    }
+
+    public void viewHighscoresAction(ActionEvent actionEvent) throws IOException {
+        HighscoreController ctrl = new HighscoreController();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/highscores.fxml"));
+        loader.setController(ctrl);
+
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Najbolji rezultati");
+        stage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        stage.show();
+
         Node node = (Node) actionEvent.getSource();
         Stage currStage = (Stage) node.getScene().getWindow();
         currStage.close();
