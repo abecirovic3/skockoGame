@@ -26,7 +26,7 @@
          </children>
       </GridPane>
       <Label fx:id="timeLabel" text="Vaše vrijeme je:" />
-      <Label fx:id="recordLabel" />
+      <Label fx:id="nameLabel" text="Unesite vaše ime:" />
       <TextField fx:id="usernameFld" />
       <ButtonBar prefHeight="40.0" prefWidth="205.0">
         <buttons>

@@ -77,7 +77,6 @@ public class GameController {
     public Button btn53;
 
     private int activeLine = 0;
-    //private int[] inputList = new int[4];
     private Stopwatch stopwatch = new Stopwatch();
     private boolean firstAction = true;
 

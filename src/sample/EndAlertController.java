@@ -17,7 +17,7 @@ public class EndAlertController {
     public Label messageLabel;
     public Label solutionLabel;
     public Label timeLabel;
-    public Label recordLabel;
+    public Label nameLabel;
     public ImageView img1;
     public ImageView img2;
     public ImageView img3;
@@ -44,11 +44,12 @@ public class EndAlertController {
         setSolutionImages();
         setMessageLabelText();
         setTimeLabelTime();
-        if (!isNewHighscore(elapsedTime)) {
-            recordLabel.setVisible(false);
+        if (!win) {
             usernameFld.setVisible(false);
-        } else {
-            recordLabel.setText("Cestitamo postavili ste novi rekord! Unesite vase ime:");
+            nameLabel.setVisible(false);
+        }
+        else if (isNewHighscore(elapsedTime)) {
+            nameLabel.setText("Cestitamo postavili ste novi rekord! Unesite vase ime:");
         }
     }
 
@@ -94,7 +95,7 @@ public class EndAlertController {
     }
 
     public void closeAlertAction(ActionEvent actionEvent) {
-        if (isNewHighscore(elapsedTime) && !usernameFld.getText().equals(""))
+        if (win && !usernameFld.getText().equals(""))
             dao.addHighscore(usernameFld.getText(), elapsedTime);
         Node node = (Node) actionEvent.getSource();
         Stage currStage = (Stage) node.getScene().getWindow();
