@@ -4,12 +4,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <VBox alignment="CENTER" prefHeight="440.0" prefWidth="380.0" spacing="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="btnNewGame" mnemonicParsing="false" onAction="#startGameAction" prefHeight="60.0" prefWidth="200.0" text="NOVA IGRA" />
        <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="UPUTSTVA" />
-       <Button fx:id="btnHighscores" mnemonicParsing="false" onAction="#viewHighscoresAction" prefHeight="60.0" prefWidth="200.0" text="HISTORIJA REZULTATA" />
+       <Button fx:id="btnHighscores" mnemonicParsing="false" onAction="#viewHighscoresAction" prefHeight="60.0" prefWidth="200.0" text="NAJBOLJI REZULTATI" />
       <Button fx:id="btnExit" layoutX="15.0" layoutY="145.0" mnemonicParsing="false" onAction="#closeGameAction" prefHeight="60.0" prefWidth="200.0" text="IZLAZ" />
    </children>
    <padding>
