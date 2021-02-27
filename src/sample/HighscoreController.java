@@ -1,6 +1,6 @@
 package sample;
 
-import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -12,7 +12,6 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
-import javafx.event.ActionEvent;
 import java.io.IOException;
 import java.util.Optional;
 
@@ -51,8 +50,9 @@ public class HighscoreController {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Upozorenje");
         alert.setHeaderText("Jeste li sigurni da želite obrisati sve rezultate?");
-        ((Button)alert.getDialogPane().lookupButton(ButtonType.OK)).setText("Da");
-        ((Button)alert.getDialogPane().lookupButton(ButtonType.CANCEL)).setText("Odustani");
+        ((Button) alert.getDialogPane().lookupButton(ButtonType.OK)).setText("Da");
+        ((Button) alert.getDialogPane().lookupButton(ButtonType.CANCEL)).setText("Odustani");
+
         Optional<ButtonType> result = alert.showAndWait();
 
         if (result.isPresent() && result.get() == ButtonType.OK) {

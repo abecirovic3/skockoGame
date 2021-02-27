@@ -1,9 +1,25 @@
 .fullHit {
    -fx-background-color: greenyellow;
+   -fx-border-color: gray;
+   -fx-border-width: 2;
 }
 
 .halfHit {
    -fx-background-color: yellow;
+   -fx-border-color: gray;
+   -fx-border-width: 2;
+}
+
+.labelsAndButtons {
+    -fx-background-color: white;
+    -fx-border-color: gray;
+    -fx-border-width: 2;
+}
+
+.formsGeneral {
+    -fx-background-color: lightgray;
+    -fx-border-color: gray;
+    -fx-border-width: 2;
 }
 
 #btnBall {

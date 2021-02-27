@@ -227,6 +227,7 @@ public class GameController {
         for (int i=0; i<fullHits; i++) {
             Label label = getLabel(label1, label2, label3, label4, i);
             label.setStyle(null);
+            label.getStyleClass().clear();
             label.getStyleClass().add("fullHit");
         }
 
@@ -234,6 +235,7 @@ public class GameController {
         for (int i = fullHits; i < fullHits + halfHits; i++) {
             Label label = getLabel(label1, label2, label3, label4, i);
             label.setStyle(null);
+            label.getStyleClass().clear();
             label.getStyleClass().add("halfHit");
         }
     }
