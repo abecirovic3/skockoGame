@@ -146,7 +146,7 @@ public class GameController {
         button.setStyle("-fx-background-image: url(\"" + imageSource + "\");" +
                 "-fx-background-repeat: no-repeat;" +
                 "-fx-background-position:center;" +
-                "-fx-background-color: white;");
+                "-fx-background-color: #ececec;");
     }
 
     private int firstEmptyIndex() {
@@ -297,6 +297,7 @@ public class GameController {
         Stage stage = new Stage();
         stage.setTitle("Kraj");
         stage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -330,6 +331,7 @@ public class GameController {
         Stage newStage = new Stage();
         newStage.setTitle("Main");
         newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        newStage.setResizable(false);
         newStage.show();
 
         Node node = (Node) actionEvent.getSource();

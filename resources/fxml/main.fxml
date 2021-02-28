@@ -11,7 +11,7 @@
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>
-       <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" text="UPUTSTVA">
+       <Button fx:id="btnInstructions" mnemonicParsing="false" onAction="#viewInstructionsAction" prefHeight="60.0" prefWidth="200.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" text="UPUTSTVA">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>

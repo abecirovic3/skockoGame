@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="5.0" prefHeight="440.0" prefWidth="380.0" style="-fx-background-color: lightcyan;" vgap="5.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
-   <stylesheets>
-      <URL value="@/css/game.css" />
-   </stylesheets>
+<GridPane alignment="center" hgap="5.0" prefHeight="440.0" prefWidth="380.0" styleClass="formsGeneral" stylesheets="@../css/game.css" vgap="5.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
    <rowConstraints>
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
@@ -41,13 +37,13 @@
    <children>
       <HBox prefHeight="60.0" prefWidth="380.0" spacing="2.0" GridPane.columnSpan="6" GridPane.rowIndex="12" GridPane.rowSpan="2">
          <children>
-            <Button fx:id="btnBall" mnemonicParsing="false" onAction="#inputAction" prefHeight="54.0" prefWidth="54.0" />
-            <Button fx:id="btnShamrock" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#inputAction" prefHeight="54.0" prefWidth="54.0" />
-            <Button fx:id="btnLeaf" layoutX="64.0" layoutY="10.0" mnemonicParsing="false" onAction="#inputAction" prefHeight="54.0" prefWidth="54.0" />
-            <Button fx:id="btnHeart" layoutX="118.0" layoutY="10.0" mnemonicParsing="false" onAction="#inputAction" prefHeight="54.0" prefWidth="54.0" />
-            <Button fx:id="btnSquare" layoutX="172.0" layoutY="10.0" mnemonicParsing="false" onAction="#inputAction" prefHeight="54.0" prefWidth="54.0" />
-            <Button fx:id="btnDiamond" layoutX="226.0" layoutY="10.0" mnemonicParsing="false" onAction="#inputAction" prefHeight="54.0" prefWidth="54.0" />
-            <Button fx:id="btnOk" layoutX="280.0" layoutY="10.0" mnemonicParsing="false" onAction="#validateAction" prefHeight="54.0" prefWidth="54.0" text="OK" textAlignment="CENTER">
+            <Button fx:id="btnBall" mnemonicParsing="false" onAction="#inputAction" prefHeight="54.0" prefWidth="54.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" />
+            <Button fx:id="btnShamrock" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#inputAction" prefHeight="54.0" prefWidth="54.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" />
+            <Button fx:id="btnLeaf" layoutX="64.0" layoutY="10.0" mnemonicParsing="false" onAction="#inputAction" prefHeight="54.0" prefWidth="54.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" />
+            <Button fx:id="btnHeart" layoutX="118.0" layoutY="10.0" mnemonicParsing="false" onAction="#inputAction" prefHeight="54.0" prefWidth="54.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" />
+            <Button fx:id="btnSquare" layoutX="172.0" layoutY="10.0" mnemonicParsing="false" onAction="#inputAction" prefHeight="54.0" prefWidth="54.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" />
+            <Button fx:id="btnDiamond" layoutX="226.0" layoutY="10.0" mnemonicParsing="false" onAction="#inputAction" prefHeight="54.0" prefWidth="54.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" />
+            <Button fx:id="btnOk" layoutX="280.0" layoutY="10.0" mnemonicParsing="false" onAction="#validateAction" prefHeight="54.0" prefWidth="54.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" text="OK" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font></Button>
@@ -56,54 +52,57 @@
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </GridPane.margin>
       </HBox>
-      <Label fx:id="lab00" layoutX="331.0" layoutY="15.0" prefHeight="24.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" />
-      <Label fx:id="lab01" layoutX="331.0" layoutY="15.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="5" />
-      <Label fx:id="lab02" layoutX="331.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="24.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <Label fx:id="lab03" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-      <Label fx:id="lab10" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-      <Label fx:id="lab11" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-      <Label fx:id="lab12" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-      <Label fx:id="lab13" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-      <Label fx:id="lab20" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-      <Label fx:id="lab21" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-      <Label fx:id="lab22" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-      <Label fx:id="lab23" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-      <Label fx:id="lab30" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-      <Label fx:id="lab31" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-      <Label fx:id="lab32" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-      <Label fx:id="lab33" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-      <Label fx:id="lab40" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" GridPane.rowIndex="8" />
-      <Label fx:id="lab41" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="5" GridPane.rowIndex="8" />
-      <Label fx:id="lab42" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-      <Label fx:id="lab43" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="5" GridPane.rowIndex="9" />
-      <Label fx:id="lab50" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" GridPane.rowIndex="10" />
-      <Label fx:id="lab51" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="5" GridPane.rowIndex="10" />
-      <Label fx:id="lab52" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="4" GridPane.rowIndex="11" />
-      <Label fx:id="lab53" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="5" GridPane.rowIndex="11" />
-      <Button fx:id="btn00" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.rowSpan="2" />
-      <Button fx:id="btn01" layoutX="252.0" layoutY="311.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="1" GridPane.rowSpan="2" />
-      <Button fx:id="btn02" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="2" GridPane.rowSpan="2" />
-      <Button fx:id="btn03" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="3" GridPane.rowSpan="2" />
-      <Button fx:id="btn10" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.rowIndex="2" GridPane.rowSpan="2" />
-      <Button fx:id="btn11" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2" />
-      <Button fx:id="btn12" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2" />
-      <Button fx:id="btn13" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
-      <Button fx:id="btn20" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.rowIndex="4" GridPane.rowSpan="2" />
-      <Button fx:id="btn21" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.rowSpan="2" />
-      <Button fx:id="btn22" layoutX="252.0" layoutY="311.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.rowSpan="2" />
-      <Button fx:id="btn23" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
-      <Button fx:id="btn30" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.rowIndex="6" GridPane.rowSpan="2" />
-      <Button fx:id="btn31" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.rowSpan="2" />
-      <Button fx:id="btn32" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="2" GridPane.rowIndex="6" GridPane.rowSpan="2" />
-      <Button fx:id="btn33" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="3" GridPane.rowIndex="6" GridPane.rowSpan="2" />
-      <Button fx:id="btn40" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.rowIndex="8" GridPane.rowSpan="2" />
-      <Button fx:id="btn41" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="8" GridPane.rowSpan="2" />
-      <Button fx:id="btn42" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="2" GridPane.rowIndex="8" GridPane.rowSpan="2" />
-      <Button fx:id="btn43" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="3" GridPane.rowIndex="8" GridPane.rowSpan="2" />
-      <Button fx:id="btn50" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.rowIndex="10" GridPane.rowSpan="2" />
-      <Button fx:id="btn51" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="1" GridPane.rowIndex="10" GridPane.rowSpan="2" />
-      <Button fx:id="btn52" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="2" GridPane.rowIndex="10" GridPane.rowSpan="2" />
-      <Button fx:id="btn53" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: lightblue;" GridPane.columnIndex="3" GridPane.rowIndex="10" GridPane.rowSpan="2" />
-      <Button fx:id="btnBack" mnemonicParsing="false" onAction="#returnToMenuAction" prefHeight="50.0" prefWidth="370.0" text="NAZAD" GridPane.columnSpan="2147483647" GridPane.rowIndex="14" />
+      <Label fx:id="lab00" layoutX="331.0" layoutY="15.0" prefHeight="24.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="4" />
+      <Label fx:id="lab01" layoutX="331.0" layoutY="15.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="5" />
+      <Label fx:id="lab02" layoutX="331.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="24.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <Label fx:id="lab03" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+      <Label fx:id="lab10" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Label fx:id="lab11" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <Label fx:id="lab12" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Label fx:id="lab13" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Label fx:id="lab20" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Label fx:id="lab21" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <Label fx:id="lab22" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <Label fx:id="lab23" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+      <Label fx:id="lab30" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <Label fx:id="lab31" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+      <Label fx:id="lab32" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+      <Label fx:id="lab33" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+      <Label fx:id="lab40" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+      <Label fx:id="lab41" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+      <Label fx:id="lab42" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+      <Label fx:id="lab43" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+      <Label fx:id="lab50" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+      <Label fx:id="lab51" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+      <Label fx:id="lab52" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+      <Label fx:id="lab53" layoutX="15.0" layoutY="15.0" maxHeight="25.0" maxWidth="25.0" prefHeight="25.0" prefWidth="25.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+      <Button fx:id="btn00" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.rowSpan="2" />
+      <Button fx:id="btn01" layoutX="252.0" layoutY="311.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="1" GridPane.rowSpan="2" />
+      <Button fx:id="btn02" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="2" GridPane.rowSpan="2" />
+      <Button fx:id="btn03" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="3" GridPane.rowSpan="2" />
+      <Button fx:id="btn10" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+      <Button fx:id="btn11" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+      <Button fx:id="btn12" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+      <Button fx:id="btn13" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+      <Button fx:id="btn20" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+      <Button fx:id="btn21" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+      <Button fx:id="btn22" layoutX="252.0" layoutY="311.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+      <Button fx:id="btn23" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+      <Button fx:id="btn30" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.rowIndex="6" GridPane.rowSpan="2" />
+      <Button fx:id="btn31" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.rowSpan="2" />
+      <Button fx:id="btn32" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="2" GridPane.rowIndex="6" GridPane.rowSpan="2" />
+      <Button fx:id="btn33" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="3" GridPane.rowIndex="6" GridPane.rowSpan="2" />
+      <Button fx:id="btn40" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.rowIndex="8" GridPane.rowSpan="2" />
+      <Button fx:id="btn41" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="1" GridPane.rowIndex="8" GridPane.rowSpan="2" />
+      <Button fx:id="btn42" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="2" GridPane.rowIndex="8" GridPane.rowSpan="2" />
+      <Button fx:id="btn43" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="3" GridPane.rowIndex="8" GridPane.rowSpan="2" />
+      <Button fx:id="btn50" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.rowIndex="10" GridPane.rowSpan="2" />
+      <Button fx:id="btn51" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="1" GridPane.rowIndex="10" GridPane.rowSpan="2" />
+      <Button fx:id="btn52" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="2" GridPane.rowIndex="10" GridPane.rowSpan="2" />
+      <Button fx:id="btn53" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#recoverAction" prefHeight="53.0" prefWidth="74.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" GridPane.columnIndex="3" GridPane.rowIndex="10" GridPane.rowSpan="2" />
+      <Button fx:id="btnBack" mnemonicParsing="false" onAction="#returnToMenuAction" prefHeight="50.0" prefWidth="370.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" text="NAZAD" GridPane.columnSpan="2147483647" GridPane.rowIndex="14">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
    </children>
 </GridPane>

@@ -8,10 +8,11 @@
    -fx-background-color: yellow;
    -fx-border-color: gray;
    -fx-border-width: 2;
+
 }
 
 .labelsAndButtons {
-    -fx-background-color: white;
+    -fx-background-color: #ececec;
     -fx-border-color: gray;
     -fx-border-width: 2;
 }

@@ -18,8 +18,9 @@ public class Main extends Application {
         loader.setController(ctrl);
 
         Parent root = loader.load();
-        primaryStage.setTitle("Main");
+        primaryStage.setTitle("Početna");
         primaryStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

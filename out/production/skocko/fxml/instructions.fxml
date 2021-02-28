@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="370.0" spacing="5.0" styleClass="formsGeneral" stylesheets="@../css/game.css">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Pane>
+               <children>
+                  <Label fx:id="labelText" alignment="TOP_LEFT" prefHeight="800.0" prefWidth="338.0" text="Cilj igre jeste pogoditi slučajno generisanu sekvencu simbola. Generisana sekvenca se sastoji od četiri simbola iz skupa od šest različitih simbola, pri čemu je ponavljanje dozvoljeno. Za pronalazak rješenja igrač ima na raspolaganju najviše šest pokušaja. Prvim klikom na neki od simbola pokreće se štoperica koja mjeri vrijeme potrebno za pogađanje sekvence. Ako igrač pogodi traženu sekvencu, ima mogućnost da svoj rezultat spasi, tako što unese svoje ime, u za to predviđeno polje. Igrač bira željene simbole klikom na dugmad na dnu prozora. Ako je zadovoljan odabirom, unesenu kombinaciju potvrđuje pritiskom na dugme OK. Ako nije zadovoljan unesenom kombinacijom, ima mogućnost da klikom na uneseni simbol poništi unos tog simbola. Nakon potvrde unosa, u datom redu će eventualno kontrolne labele biti obojene u zelenu ili žutu boju. Kontrolne labele služe kao indikator igraču da li je na dobrom putu da pogodi traženu kombinaciju. Naime zeleno obojena labela ukazuje da je igrač pozicionirao ispravan simbol na ispravno mjesto, dok žuto obojena labela ukazuje na to da je igrač odabrao ispravan simbol, ali nije ga pozicionirao na ispravno mjesto. Igra je završena kada igrač pogodi kombinaciju ili nakon 6 pogrešnih unosa." textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ScrollBar fx:id="scrollBar" max="340.0" orientation="VERTICAL" />
+         </children>
+      </HBox>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" styleClass="formsGeneral" stylesheets="@../css/game.css">
+        <buttons>
+          <Button fx:id="btnBack" mnemonicParsing="false" onAction="#backAction" styleClass="labelsAndButtons" stylesheets="@../css/game.css" text="Nazad">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+        </buttons>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </ButtonBar>
+   </children>
+</VBox>

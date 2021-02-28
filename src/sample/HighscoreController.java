@@ -37,8 +37,9 @@ public class HighscoreController {
 
         Parent root = loader.load();
         Stage stage = new Stage();
-        stage.setTitle("Main");
+        stage.setTitle("Početna");
         stage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        stage.setResizable(false);
         stage.show();
 
         Node node = (Node) actionEvent.getSource();
