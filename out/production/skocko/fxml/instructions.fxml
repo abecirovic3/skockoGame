@@ -7,7 +7,7 @@
 
 <VBox xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="370.0" spacing="5.0" styleClass="formsGeneral" stylesheets="@../css/game.css">
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onScroll="#scrollAction" prefHeight="390.0" prefWidth="370.0" spacing="5.0" styleClass="formsGeneral" stylesheets="@../css/game.css">
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
@@ -21,7 +21,7 @@
                   </Label>
                </children>
             </Pane>
-            <ScrollBar fx:id="scrollBar" max="340.0" orientation="VERTICAL" />
+            <ScrollBar fx:id="scrollBar" max="340.0" orientation="VERTICAL" unitIncrement="5.0" />
          </children>
       </HBox>
       <ButtonBar prefHeight="40.0" prefWidth="200.0" styleClass="formsGeneral" stylesheets="@../css/game.css">

@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
+import javafx.scene.input.ScrollEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -26,7 +27,6 @@ public class InstructionController {
             public void changed(ObservableValue<? extends Number> ov,
                                 Number old_val, Number new_val) {
                 labelText.setTranslateY(-new_val.doubleValue());
-                //labelText.setLayoutY(-new_val.doubleValue());
             }
         });
     }
@@ -47,5 +47,14 @@ public class InstructionController {
         Node node = (Node) actionEvent.getSource();
         Stage currStage = (Stage) node.getScene().getWindow();
         currStage.close();
+    }
+
+    public void scrollAction(ScrollEvent scrollEvent) {
+        if (scrollBar.getValue() - scrollEvent.getDeltaY() > scrollBar.getMax())
+            scrollBar.valueProperty().setValue(scrollBar.getMax());
+        else if (scrollBar.getValue() - scrollEvent.getDeltaY() < scrollBar.getMin())
+            scrollBar.valueProperty().setValue(scrollBar.getMin());
+        else
+            scrollBar.valueProperty().setValue(scrollBar.getValue() - scrollEvent.getDeltaY());
     }
 }
