@@ -7,6 +7,11 @@
 
 <VBox alignment="CENTER" prefHeight="440.0" prefWidth="380.0" spacing="10.0" styleClass="formsGeneral" stylesheets="@../css/game.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="200.0" text="Skocko" textAlignment="CENTER">
+         <font>
+            <Font name="Chiller" size="36.0" />
+         </font>
+      </Label>
       <Button fx:id="btnNewGame" mnemonicParsing="false" onAction="#startGameAction" prefHeight="60.0" prefWidth="200.0" styleClass="labelsAndButtons" stylesheets="@../css/game.css" text="NOVA IGRA">
          <font>
             <Font name="System Bold" size="16.0" />
