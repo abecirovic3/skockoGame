@@ -5,9 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import java.awt.*;
+import java.awt.desktop.*;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
@@ -71,5 +76,31 @@ public class MainController {
         Node node = (Node) actionEvent.getSource();
         Stage currStage = (Stage) node.getScene().getWindow();
         currStage.close();
+    }
+
+    public void openLinkAction(ActionEvent actionEvent) {
+        Button button = (Button) actionEvent.getSource();
+
+        String link;
+        if (button.getId().equals("btnGithub"))
+            link = "https://github.com/abecirovic3";
+        else if (button.getId().equals("btnLinkedin"))
+            link = "https://www.linkedin.com/in/ajdin-be%C4%8Dirovi%C4%87-bb83b6208/";
+        else
+            link = "https://www.facebook.com/ajdin.becirovic.1";
+
+        try {
+            URL url = new URL(link);
+            Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+            if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+                try {
+                    desktop.browse(url.toURI());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
     }
 }

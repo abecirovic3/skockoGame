@@ -23,38 +23,43 @@
     -fx-border-width: 2;
 }
 
-#btnBall {
-    -fx-background-image: url("/img/854.png");
+#btnBall, #btnShamrock, #btnLeaf, #btnHeart, #btnSquare, #btnDiamond, #btnGithub, #btnFacebook, btnLinkedin  {
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;
+}
+
+#btnBall {
+    -fx-background-image: url("/img/854.png");
 }
 
 #btnShamrock {
     -fx-background-image: url("/img/djetelina54.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position:center;
 }
 
 #btnLeaf {
     -fx-background-image: url("/img/list54.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position:center;
 }
 
 #btnHeart {
     -fx-background-image: url("/img/srce54.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position:center;
 }
 
 #btnSquare {
     -fx-background-image: url("/img/baklava54.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position:center;
 }
 
 #btnDiamond {
     -fx-background-image: url("/img/dijamant54.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position:center;
+}
+
+#btnGithub {
+    -fx-background-image: url("/img/githubIcon.png");
+}
+
+#btnFacebook {
+    -fx-background-image: url("/img/facebookIcon.png");
+}
+
+#btnLinkedin {
+    -fx-background-image: url("/img/linkedinIcon.png");
 }
